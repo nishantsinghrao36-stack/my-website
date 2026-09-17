@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sorry Divya ❤️</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffe6ee, #fff5f8, #ffe0ea);
+        color: #222;
+    }
+
+    .page {
+        min-height: 100vh;
+        display: none;
+        position: relative;
+        padding: 30px 20px;
+    }
+
+    .page.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* PAGE 1 */
+
+    .main-sorry {
+        font-family: "Brush Script MT", "Segoe Script", cursive;
+        font-size: clamp(80px, 18vw, 180px);
+        font-weight: bold;
+        color: #d6336c;
+        letter-spacing: 10px;
+        text-align: center;
+        animation: appear 0.8s ease;
+    }
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+            transform: scale(0.7);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .floating {
+        position: absolute;
+        font-family: "Brush Script MT", cursive;
+        font-size: 22px;
+        color: #e26a91;
+        opacity: 0.75;
+        animation: float 5s infinite ease-in-out;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        0%,100% {
+            transform: translateY(0) rotate(-5deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate(5deg);
+        }
+    }
+
+    .next-btn {
+        margin-top: 35px;
+        padding: 14px 35px;
+        border: none;
+        border-radius: 30px;
+        background: #d6336c;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(214,51,108,0.3);
+        transition: 0.2s;
+    }
+
+    .next-btn:hover {
+        transform: scale(1.08);
+    }
+
+    /* PAGE 2 */
+
+    .message {
+        text-align: center;
+        max-width: 900px;
+    }
+
+    .message .first-line {
+        font-size: clamp(25px, 5vw, 48px);
+        font-weight: bold;
+        line-height: 1.3;
+    }
+
+    .message .second-line {
+        font-family: "Brush Script MT", "Segoe Script", cursive;
+        font-size: clamp(45px, 8vw, 85px);
+        color: #d6336c;
+        margin-top: 5px;
+    }
+
+    .question-box {
+        margin-top: 35px;
+        padding: 25px 30px;
+        border: 3px solid #d6336c;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.8);
+        font-size: clamp(18px, 3vw, 27px);
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .options {
+        display: flex;
+        gap: 25px;
+        margin-top: 25px;
+        justify-content: center;
+    }
+
+    .option {
+        min-width: 120px;
+        padding: 14px 30px;
+        border-radius: 12px;
+        border: 2px solid #d6336c;
+        background: white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .option:hover {
+        transform: scale(1.08);
+    }
+
+    .no-btn {
+        position: relative;
+    }
+
+    .phone-note {
+        display: none;
+        margin-top: 20px;
+        padding: 15px 20px;
+        background: #fff;
+        border-radius: 15px;
+        border: 2px solid #d6336c;
+        max-width: 450px;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    /* PAGE 3 */
+
+    .final-page {
+        justify-content: flex-start !important;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .final-message {
+        width: min(900px, 95%);
+        background: rgba(255,255,255,0.88);
+        border-radius: 25px;
+        padding: 35px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        font-size: clamp(18px, 2.4vw, 25px);
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .heart {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+        .main-sorry {
+            letter-spacing: 3px;
+        }
+
+        .options {
+            gap: 12px;
+        }
+
+        .option {
+            min-width: 100px;
+            padding: 12px 20px;
+        }
+
+        .question-box {
+            padding: 20px 15px;
+        }
+
+        .final-message {
+            padding: 22px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<section id="page1" class="page active">
+
+    <div class="floating" style="top:8%;left:5%;">Sorry Divya</div>
+    <div class="floating" style="top:15%;right:7%;">Sorry Divya</div>
+    <div class="floating" style="top:30%;left:12%;">Sorry Divya</div>
+    <div class="floating" style="top:38%;right:10%;">Sorry Divya</div>
+    <div class="floating" style="top:52%;left:4%;">Sorry Divya</div>
+    <div class="floating" style="top:62%;right:5%;">Sorry Divya</div>
+    <div class="floating" style="top:75%;left:15%;">Sorry Divya</div>
+    <div class="floating" style="top:82%;right:15%;">Sorry Divya</div>
+    <div class="floating" style="top:22%;left:45%;">Sorry Divya</div>
+    <div class="floating" style="top:70%;right:40%;">Sorry Divya</div>
+
+    <div class="main-sorry" id="mainSorry"></div>
+
+    <button class="next-btn" onclick="showPage(2)">
+        NEXT ❤️
+    </button>
+
+</section>
+
+
+<!-- PAGE 2 -->
+
+<section id="page2" class="page">
+
+    <div class="message">
+
+        <div class="first-line">
+            Six months pehle jo hua us ke liye
+        </div>
+
+        <div class="second-line">
+            SORRY DIVYA
+        </div>
+
+        <div class="question-box">
+            TERE KO MERE BAAT KARNE ME INTEREST HE ???
+        </div>
+
+        <div class="options">
+
+            <button class="option yes-btn" onclick="showPage(3)">
+                YES
+            </button>
+
+            <button class="option no-btn" id="noButton">
+                NO
+            </button>
+
+        </div>
+
+        <div class="phone-note" id="phoneNote">
+            Bhai 6 Mahine Ho Gye He Baat Ko Aab To Bhul Ja 😭😭🥀🥹
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAGE 3 -->
+
+<section id="page3" class="page final-page">
+
+    <div class="final-message">
+
+        <div class="heart">❤️</div>
+
+        Tune Yes Click kiya matlab u r interested 😀
+        tere ko mere se baat karni he na. 😁
+
+        <br><br>
+
+        Vo baat alag he ki mene no wala option thoda playful
+        rakha hua tha.
+
+        <br><br>
+
+        Tune ek baat notice kiya he 🤔
+
+        <br><br>
+
+        Mene tere ko ye message same TIME and same DATE pe
+        kiya he jis date and time pe tune mere se baat karna
+        band kiya tha.
+
+        <br><br>
+
+        It was <b>19 March</b> and time <b>2:30 to 3:00 PM</b>
+        or aaj bhi same time and date.
+
+        <br><br>
+
+        Ye to meri taraf se try tha ki ham baat karne lage
+        fir se.
+
+        <br><br>
+
+        Tere ko baat karni he ya nhi,
+        <b>tera decision he.</b>
+
+        <br><br>
+
+        I am waiting for your reply. ❤️
+
+    </div>
+
+</section>
+
+
+<script>
+
+    /* S → O → R → R → Y animation */
+
+    const letters = ["S", "O", "R", "R", "Y"];
+    const mainSorry = document.getElementById("mainSorry");
+
+    let i = 0;
+
+    function writeSorry() {
+
+        if (i < letters.length) {
+            mainSorry.innerHTML += letters[i];
+            i++;
+
+            setTimeout(writeSorry, 500);
+        }
+
+    }
+
+    writeSorry();
+
+
+    /* PAGE SWITCH */
+
+    function showPage(number) {
+
+        document.querySelectorAll(".page").forEach(page => {
+            page.classList.remove("active");
+        });
+
+        document.getElementById("page" + number).classList.add("active");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+    /* PLAYFUL NO BUTTON */
+
+    const noButton = document.getElementById("noButton");
+    const phoneNote = document.getElementById("phoneNote");
+
+    function moveNoButton() {
+
+        /*
+        Desktop:
+        button moves to another position when mouse gets close.
+        */
+
+        if (window.innerWidth > 700) {
+
+            const maxX = Math.min(window.innerWidth - 160, 500);
+            const maxY = 250;
+
+            const x = Math.random() * maxX - maxX / 2;
+            const y = Math.random() * maxY - maxY / 2;
+
+            noButton.style.transform =
+                `translate(${x}px, ${y}px)`;
+
+        } else {
+
+            /*
+            Phone:
+            instead of preventing the tap completely,
+            show the funny message.
+            */
+
+            phoneNote.style.display = "block";
+
+        }
+
+    }
+
+    noButton.addEventListener("mouseenter", moveNoButton);
+    noButton.addEventListener("touchstart", function(e) {
+
+        if (window.innerWidth <= 700) {
+            phoneNote.style.display = "block";
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
